@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1441" height="312" viewBox="0 0 1441 312">
+<rect width="1441" height="312" fill="#121212"/>
+<g font-family="'DejaVu Sans Mono', monospace" font-size="20">
+<text x="28" y="44"><tspan fill="#4caf50">$ </tspan><tspan fill="#ffffff">time curl -X POST localhost:5000/order -H &#x27;Content-Type: application/json&#x27; -d &#x27;{&quot;item_id&quot;:&quot;gadget&quot;,&quot;quantity&quot;:1}&#x27;</tspan></text>
+<text x="28" y="76" fill="#e0e0e0">{&quot;error&quot;:&quot;inventory service timed out&quot;,&quot;item_id&quot;:&quot;gadget&quot;}</text>
+<text x="28" y="108" fill="#e0e0e0"></text>
+<text x="28" y="140" fill="#e0e0e0">HTTP 504</text>
+<text x="28" y="172" fill="#e0e0e0"></text>
+<text x="28" y="204" fill="#e0e0e0">real    0m2.025s</text>
+<text x="28" y="236" fill="#e0e0e0">user    0m0.004s</text>
+<text x="28" y="268" fill="#e0e0e0">sys     0m0.008s</text>
+</g></svg>

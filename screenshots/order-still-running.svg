@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1381" height="312" viewBox="0 0 1381 312">
+<rect width="1381" height="312" fill="#121212"/>
+<g font-family="'DejaVu Sans Mono', monospace" font-size="20">
+<text x="28" y="44"><tspan fill="#4caf50">$ </tspan><tspan fill="#ffffff">curl -X POST localhost:5000/order -H &#x27;Content-Type: application/json&#x27; -d &#x27;{&quot;item_id&quot;:&quot;gadget&quot;,&quot;quantity&quot;:1}&#x27;</tspan></text>
+<text x="28" y="76" fill="#e0e0e0">{&quot;item_id&quot;:&quot;gadget&quot;,&quot;order_id&quot;:3,&quot;quantity&quot;:1,&quot;status&quot;:&quot;placed&quot;}</text>
+<text x="28" y="108" fill="#e0e0e0"></text>
+<text x="28" y="140" fill="#e0e0e0">HTTP 201</text>
+<text x="28" y="172"><tspan fill="#4caf50">$ </tspan><tspan fill="#ffffff">curl localhost:5000/health</tspan></text>
+<text x="28" y="204" fill="#e0e0e0">{&quot;status&quot;:&quot;ok&quot;}</text>
+<text x="28" y="236" fill="#e0e0e0"></text>
+<text x="28" y="268" fill="#e0e0e0">HTTP 200</text>
+</g></svg>

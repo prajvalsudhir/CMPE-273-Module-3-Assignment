@@ -60,6 +60,8 @@ $ curl -X POST localhost:5000/order -H 'Content-Type: application/json' \
 ```
 HTTP 201. Error cases: unknown item → 404, insufficient stock → 409.
 
+![Successful REST order request](screenshots/rest-success.svg)
+
 ## Successful gRPC request/response
 
 ```bash
@@ -71,6 +73,8 @@ $ curl -X POST localhost:5000/order -H 'Content-Type: application/json' \
 {"available":true,"item_id":"widget","order_id":1,"quantity":2,"status":"placed","stock":100}
 ```
 HTTP 201. Error cases use gRPC statuses: unknown item → `NOT_FOUND`, insufficient stock → `RESOURCE_EXHAUSTED`.
+
+![Successful gRPC order request](screenshots/grpc-success.svg)
 
 ## REST timeout handling
 
@@ -87,6 +91,8 @@ real    0m2.025s
 
 The request fails after 2s with a 504 instead of hanging.
 
+![REST timeout handling](screenshots/rest-timeout.svg)
+
 ## gRPC deadline handling
 
 With `INVENTORY_DELAY=5` on the gRPC Inventory Service (delay > 2s deadline):
@@ -101,6 +107,8 @@ real    0m2.021s
 ```
 
 The client raises `DEADLINE_EXCEEDED` at 2s and the order fails with a 504.
+
+![gRPC deadline handling](screenshots/grpc-deadline.svg)
 
 ## Order Service remains running after the failures
 
@@ -118,6 +126,8 @@ HTTP 200
 ```
 
 The Order Service kept serving requests — the timeout/deadline only failed the individual order.
+
+![Order Service remains running after the failures](screenshots/order-still-running.svg)
 
 ## REST vs gRPC comparison
 
